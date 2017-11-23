@@ -42,9 +42,15 @@ patterns: [ # An array of individual pattern declarations.
     name: 'keyword.judgement.gf'
   }
 
-  # symbols # TODO
+  # other keywords
   {
-    match: '\\b(=|:|;|=>|->|\!|\\\\)\\b'
+    match: '\\b(table|pre|case)\\b'
+    name: 'keyword.other.gf'
+  }
+
+  # symbols
+  {
+    match: '(=>|->|:|;|=|,|\\.|\\+|\!|\\\\)'
     name: 'constant.gf'
   }
 
