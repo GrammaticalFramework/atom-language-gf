@@ -44,7 +44,7 @@ patterns: [ # An array of individual pattern declarations.
 
   # other keywords
   {
-    match: '\\b(table|pre|case)\\b'
+    match: '\\b(table|pre|case|variants|let|in|where)\\b'
     name: 'keyword.other.gf'
   }
 
