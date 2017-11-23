@@ -6,6 +6,7 @@
   "keywords": [
   ],
   "repository": "https://github.com/johnjcamilleri/atom-language-gf",
+  "bugs": "https://github.com/johnjcamilleri/atom-language-gf/issues",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
