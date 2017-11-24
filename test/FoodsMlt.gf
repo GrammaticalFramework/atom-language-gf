@@ -21,7 +21,7 @@ concrete FoodsMlt of Foods = open Prelude in {
     Mod quality kind = {
       s = \\n => kind.s ! n ++ quality.s ! kind.g ! n ;
       g = kind.g
-      } ;
+    } ;
 
     Wine = noun "inbid" "inbejjed" Masc ;
     Cheese = noun "ġobon" "ġobniet" Masc ;
@@ -46,16 +46,16 @@ concrete FoodsMlt of Foods = open Prelude in {
     --Params: Sing Masc, Sing Fem, Plural
     adjective : (_,_,_ : Str) -> {s : Gender => Number => Str} = \iswed,sewda,suwed -> {
       s = table {
-	Masc => table {
-	  Sg => iswed ;
-	  Pl => suwed
-	  } ;
-	Fem => table {
-	  Sg => sewda ;
-	  Pl => suwed
-	  }
-	}
-      } ;
+        Masc => table {
+          Sg => iswed ;
+          Pl => suwed
+          } ;
+        Fem => table {
+          Sg => sewda ;
+          Pl => suwed
+          }
+      }
+    } ;
 
     --Create a regular adjective
     --Param: Sing Masc
@@ -71,35 +71,35 @@ concrete FoodsMlt of Foods = open Prelude in {
     --Params: Singular, Plural, Gender (inherent)
     noun : Str -> Str -> Gender -> {s : Number => Str ; g : Gender} = \ktieb,kotba,g -> {
       s = table {
-	Sg => ktieb ;
-	Pl => kotba
-	} ;
-      g = g
+        Sg => ktieb ;
+        Pl => kotba
       } ;
+      g = g
+    } ;
 
     --Copula is a linking verb
     --Params: Number, Gender
     -- copula : Number -> Gender -> Str = \n,g -> case n of {
     --   Sg => case g of { Masc => "huwa" ; Fem => "hija" } ;
     --   Pl => "huma"
-    --   } ;
+    -- } ;
 
     --Create an article, taking into account first letter of next word
     article = pre {
       "a"|"e"|"i"|"o"|"u" => "l-" ;
       --cons@("ċ"|"d"|"n"|"r"|"s"|"t"|"x"|"ż") => "i" + cons + "-" ;
       _ => "il-"
-      } ;
+    } ;
 
     --Create a determinant
     --Params: Sg/Pl, Masc, Fem
     det : Number -> Str -> Str -> {s : Number => Str ; g : Gender} -> {s : Str ; g : Gender ; n : Number} = \n,m,f,cn -> {
       s = case n of {
-	Sg => case cn.g of {Masc => m ; Fem => f}; --string
-	Pl => m --default to masc
-	} ++ article ++ cn.s ! n ;
+        Sg => case cn.g of {Masc => m ; Fem => f}; --string
+        Pl => m --default to masc
+      } ++ article ++ cn.s ! n ;
       g = cn.g ; --gender
       n = n --number
-      } ;
+    } ;
 
 }

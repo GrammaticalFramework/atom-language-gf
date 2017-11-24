@@ -1,4 +1,4 @@
-# Grammatical Framework language support in Atom
+# Grammatical Framework support in Atom
 
 Adds syntax highlighting for GF grammar files in Atom.
 

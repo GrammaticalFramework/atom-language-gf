@@ -50,7 +50,11 @@ patterns: [ # An array of individual pattern declarations.
 
   # symbols
   {
-    match: '(=>|->|:|;|=|,|\\.|\\+|\!|\\\\)'
+    match: '(=>|->|:|=|\\.|\\+|\\*|\!|\\||\\\\)'
+    name: 'constant.gf'
+  }
+  {
+    match: '(;|,)'
     name: 'constant.gf'
   }
 
