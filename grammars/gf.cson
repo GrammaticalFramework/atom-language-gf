@@ -65,17 +65,22 @@ patterns: [ # An array of individual pattern declarations.
     end: '"'
     beginCaptures:
       0:
-        name: 'punctuation.definition.string.begin.gf'
+        name: 'punctuation.string.begin.gf'
     endCaptures:
       0:
-        name: 'punctuation.definition.string.end.gf'
+        name: 'punctuation.string.end.gf'
   }
 
   # comments
   {
     begin: '--'
     end: '$'
-    name: 'comment.line.double-dash.gf'
+    name: 'comment.line.gf'
+  }
+  {
+    begin: '{-'
+    end: '-}'
+    name: 'comment.block.gf'
   }
 
 ]

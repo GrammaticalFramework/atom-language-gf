@@ -79,10 +79,12 @@ concrete FoodsMlt of Foods = open Prelude in {
 
     --Copula is a linking verb
     --Params: Number, Gender
-    -- copula : Number -> Gender -> Str = \n,g -> case n of {
-    --   Sg => case g of { Masc => "huwa" ; Fem => "hija" } ;
-    --   Pl => "huma"
-    -- } ;
+    {-
+    copula : Number -> Gender -> Str = \n,g -> case n of {
+      Sg => case g of { Masc => "huwa" ; Fem => "hija" } ;
+      Pl => "huma"
+    } ;
+    -}
 
     --Create an article, taking into account first letter of next word
     article = pre {
