@@ -32,7 +32,7 @@ patterns: [ # An array of individual pattern declarations.
 
   # modules
   {
-    match: '\\b(abstract|concrete|interface|instance|resource|incomplete|of|open|in)\\b'
+    match: '\\b(abstract|concrete|interface|instance|resource|incomplete|of|with|open|in)\\b'
     name: 'keyword.module.gf'
   }
 
