@@ -1,6 +1,6 @@
 {
   "name": "language-gf",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Grammatical Framework (GF) language support in Atom",
   "keywords": [],
   "repository": "https://github.com/johnjcamilleri/language-gf",
