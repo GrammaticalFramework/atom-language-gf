@@ -3,7 +3,7 @@
   "version": "1.1.1",
   "description": "Grammatical Framework (GF) language support in Atom",
   "keywords": [],
-  "repository": "https://github.com/johnjcamilleri/language-gf",
+  "repository": "https://github.com/GrammaticalFramework/atom-language-gf",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
